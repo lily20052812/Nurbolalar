@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NurBolalar - Autizm va Daun sindromi bolalari uchun</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .hero-bg { background: linear-gradient(135deg, #1E3A8A, #14B8A6); }
+    .nav-active { color: #14B8A6; font-weight: 600; }
+    .game-card { transition: all 0.3s; }
+    .game-card:hover { transform: scale(1.05); }
+    .color-btn { width: 110px; height: 110px; border-radius: 20px; cursor: pointer; box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
+  </style>
+</head>
+<body class="bg-[#F8F1E9]">
+
+  <!-- NAVBAR -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <span class="text-4xl">🌞</span>
+        <h1 class="text-3xl font-bold text-[#1E3A8A]">NurBolalar</h1>
+      </div>
+      <div class="hidden md:flex gap-8 text-lg">
+        <a href="#home" class="hover:text-[#14B8A6]">Bosh sahifa</a>
+        <a href="#about" class="hover:text-[#14B8A6]">Biz haqimizda</a>
+        <a href="#conditions" class="hover:text-[#14B8A6]">Holati</a>
+        <a href="#games" class="hover:text-[#14B8A6]">O‘yinlar</a>
+        <a href="#parents" class="hover:text-[#14B8A6]">Ota-onalar uchun</a>
+        <a href="#progress" class="hover:text-[#14B8A6]">Progress</a>
+        <a href="#community" class="hover:text-[#14B8A6]">Jamiyat</a>
+        <a href="#doctors" class="hover:text-[#14B8A6]">Shifokorlar</a>
+        <a href="#demo" class="bg-[#14B8A6] text-white px-7 py-3 rounded-3xl">Demo</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HOME -->
+  <section id="home" class="hero-bg text-white py-28 text-center">
+    <div class="max-w-5xl mx-auto px-6">
+      <h1 class="text-6xl md:text-7xl font-bold mb-6">Autizm va Daun sindromi<br>bor bolalar uchun</h1>
+      <p class="text-3xl mb-10">Rivojlantiruvchi o‘yinlar • Amaliy qo‘llanma • Progress kuzatuvi • Mutaxassis bilan bog‘lanish</p>
+      <a href="#games" class="inline-block bg-white text-[#1E3A8A] font-bold text-2xl px-14 py-7 rounded-3xl hover:scale-105 transition">Bepul boshlash →</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="max-w-7xl mx-auto px-6 py-20 bg-white">
+    <h2 class="text-4xl font-bold text-center mb-12">Biz haqimizda</h2>
+    <div class="max-w-3xl mx-auto text-center text-xl">
+      <p>NurBolalar — O‘zbekistonda autizm va Daun sindromi bor bolalar ota-onalari uchun yaratilgan birinchi maxsus platforma. Biz har kuni ota-onalarga amaliy yordam beramiz: o‘yinlar, mashqlar, mutaxassislar va progress kuzatuvi orqali.</p>
+    </div>
+  </section>
+
+  <!-- CONDITIONS -->
+  <section id="conditions" class="max-w-7xl mx-auto px-6 py-20">
+    <h2 class="text-4xl font-bold text-center mb-16">Bolalar holati</h2>
+    <div class="grid md:grid-cols-2 gap-10">
+      <div class="bg-white rounded-3xl shadow-xl p-10">
+        <h3 class="text-3xl font-semibold text-[#1E3A8A] mb-4">Autizm</h3>
+        <p class="text-lg">Autizm — nevrologik rivojlanish holati. Bolalar ijtimoiy muloqot, nutq va takroriy harakatlarda qiyinchiliklarga duch keladi. Biz ularga mos o‘yinlar va mashqlar taklif qilamiz.</p>
+      </div>
+      <div class="bg-white rounded-3xl shadow-xl p-10">
+        <h3 class="text-3xl font-semibold text-[#14B8A6] mb-4">Daun sindromi</h3>
+        <p class="text-lg">Daun sindromi — xromosoma buzilishi. Bolalar o‘sish, nutq, motorika va ijtimoiy ko‘nikmalarda yordamga muhtoj. Biz ularni rivojlantirish uchun maxsus dasturlar tayyorladik.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAMES -->
+  <section id="games" class="bg-white py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Rivojlantiruvchi o‘yinlar</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <!-- Rang tanlash -->
+        <div class="game-card bg-[#F0F4FF] rounded-3xl p-8 text-center">
+          <h3 class="text-2xl font-semibold mb-6">🎨 Rang tanlash</h3>
+          <div class="flex flex-wrap justify-center gap-6 mb-8" id="color-game"></div>
+          <button onclick="startColorGame()" class="bg-[#1E3A8A] text-white px-10 py-5 rounded-3xl font-semibold text-lg">O‘yinni boshlash</button>
+        </div>
+
+        <!-- His-tuyg‘ular -->
+        <div class="game-card bg-[#F0F9F4] rounded-3xl p-8 text-center">
+          <h3 class="text-2xl font-semibold mb-6">😊 His-tuyg‘ularni tanish</h3>
+          <div class="grid grid-cols-2 gap-6" id="emotion-game"></div>
+          <button onclick="startEmotionGame()" class="mt-6 bg-[#14B8A6] text-white px-10 py-5 rounded-3xl font-semibold text-lg">O‘yinni boshlash</button>
+        </div>
+
+        <!-- Puzzle -->
+        <div class="game-card bg-[#FFF9E6] rounded-3xl p-8 text-center">
+          <h3 class="text-2xl font-semibold mb-6">🧩 Oddiy puzzle</h3>
+          <div id="puzzle-area" class="mx-auto w-72 h-72 bg-gray-100 rounded-3xl grid grid-cols-2 gap-2 p-4"></div>
+          <button onclick="startPuzzle()" class="mt-6 bg-[#FFB74D] text-white px-10 py-5 rounded-3xl font-semibold text-lg">Puzzleni boshlash</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOR PARENTS -->
+  <section id="parents" class="max-w-7xl mx-auto px-6 py-20">
+    <h2 class="text-4xl font-bold text-center mb-12">Ota-onalar uchun amaliy qo‘llanma</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-white p-8 rounded-3xl shadow">
+        <h4 class="text-xl font-semibold mb-3">10 minutlik diqqat mashqi</h4>
+        <p class="text-gray-600">Bolani rangli bloklar bilan o‘ynatib, diqqatni rivojlantiring. Har kuni 10 daqiqa yetarli.</p>
+      </div>
+      <div class="bg-white p-8 rounded-3xl shadow">
+        <h4 class="text-xl font-semibold mb-3">Gapirishni rivojlantirish o‘yini</h4>
+        <p class="text-gray-600">Oddiy rasmlar orqali so‘zlarni takrorlang. “Bu nima?” deb so‘rang.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRESS TRACKER -->
+  <section id="progress" class="bg-white py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Progress kuzatuvi</h2>
+      <div class="bg-[#F8F1E9] p-10 rounded-3xl text-center">
+        <p class="text-2xl mb-8">Bu haftada bola 12 ta o‘yin o‘ynadi • 87% muvaffaqiyat</p>
+        <div class="h-8 bg-gray-200 rounded-full overflow-hidden">
+          <div class="h-full w-[87%] bg-[#14B8A6]"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY -->
+  <section id="community" class="max-w-7xl mx-auto px-6 py-20">
+    <h2 class="text-4xl font-bold text-center mb-12">Ota-onalar jamiyati</h2>
+    <div class="bg-white p-8 rounded-3xl shadow mb-6">
+      <p><strong>Ayzer:</strong> Bugun bolam birinchi marta “suv” so‘zini aytdi! Rahmat NurBolalarga ❤️</p>
+    </div>
+    <textarea class="w-full p-6 rounded-3xl border" rows="3" placeholder="O‘z tajribangizni ulashing..."></textarea>
+  </section>
+
+  <!-- DOCTORS -->
+  <section id="doctors" class="max-w-7xl mx-auto px-6 py-20 bg-white">
+    <h2 class="text-4xl font-bold text-center mb-12">Mutaxassislar</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="border p-8 rounded-3xl">
+        <h4 class="font-semibold">Dr. Laylo Karimova — Bolalar nevrologi</h4>
+        <button onclick="alert('Booking form ochildi! (MVP)')" class="mt-6 w-full bg-[#1E3A8A] text-white py-5 rounded-3xl">Vaqt band qilish</button>
+      </div>
+      <div class="border p-8 rounded-3xl">
+        <h4 class="font-semibold">Dr. Ahmadjonov — Logoped</h4>
+        <button onclick="alert('Booking form ochildi! (MVP)')" class="mt-6 w-full bg-[#14B8A6] text-white py-5 rounded-3xl">Vaqt band qilish</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMO -->
+  <section id="demo" class="bg-[#1E3A8A] text-white py-24 text-center">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-5xl font-bold mb-8">🎥 NurBolalar Demo</h2>
+      <p class="text-2xl mb-10">Ilovaning to‘liq ishlashi: o‘yinlar, AI maslahatchi, progress va booking tizimi</p>
+      <a href="#" class="inline-block bg-white text-[#1E3A8A] text-2xl px-16 py-7 rounded-3xl font-bold">Demo videoni ko‘rish →</a>
+    </div>
+  </section>
+
+  <script>
+    function startColorGame() {
+      const colors = ['#81D4FA', '#A5D6A7', '#FFF59D', '#E1BEE7', '#FFCCBC'];
+      const container = document.getElementById('color-game');
+      container.innerHTML = '';
+      colors.forEach((color, i) => {
+        const btn = document.createElement('div');
+        btn.className = 'color-btn flex items-center justify-center text-4xl';
+        btn.style.backgroundColor = color;
+        btn.textContent = ['🔵','🟢','🟡','🟣','🟠'][i];
+        btn.onclick = () => alert('✅ Ajoyib! To‘g‘ri tanladingiz!');
+        container.appendChild(btn);
+      });
+    }
+
+    function startEmotionGame() {
+      const emotions = [
+        { emoji: '😊', name: 'Quvnoq' },
+        { emoji: '😢', name: 'Xafa' },
+        { emoji: '😠', name: 'G‘azab' },
+        { emoji: '😌', name: 'Tinch' }
+      ];
+      const container = document.getElementById('emotion-game');
+      container.innerHTML = '';
+      emotions.forEach(em => {
+        const div = document.createElement('div');
+        div.className = 'text-7xl cursor-pointer p-6 bg-white rounded-3xl shadow hover:scale-110 transition';
+        div.innerHTML = `<div>${em.emoji}</div><p class="text-xl mt-4">${em.name}</p>`;
+        div.onclick = () => alert(`✅ To‘g‘ri! Bu ${em.name}`);
+        container.appendChild(div);
+      });
+    }
+
+    function startPuzzle() {
+      alert('🧩 Puzzle boshlandi!\n\nBolaga quyosh va bulut rasmini yig‘ishni taklif qiling (MVP versiya).');
+    }
+
+    // Tailwind
+    tailwind.config = { content: ["*"] };
+  </script>
+</body>
+</html>
